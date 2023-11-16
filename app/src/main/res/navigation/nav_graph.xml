@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcomeFragment">
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.act_uni2.fragment.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_termFragment5"
+            app:destination="@id/termFragment5" />
+    </fragment>
+    <fragment
+        android:id="@+id/termFragment5"
+        android:name="com.example.act_uni2.fragment.TermFragment"
+        android:label="fragment_term"
+        tools:layout="@layout/fragment_term" >
+        <argument
+            android:name="nameValue"
+            app:argType="string" />
+        <argument
+            android:name="valorCb"
+            app:argType="string" />
+    </fragment>
+</navigation>

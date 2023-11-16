@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ADD6F6"
+    tools:context=".fragment.WelcomeFragment">
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/jetbrains_mono_medium"
+        android:text="@string/welcome_title"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_name"
+        style="@style/Widget.Material3.TextInputEditText.FilledBox.Dense"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:background="#CDE5F8"
+        android:ems="10"
+        android:fontFamily="@font/jetbrains_mono_medium"
+        android:hint="@string/login_user"
+        android:inputType="text"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_welcome"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_welcome"
+        app:layout_constraintTop_toBottomOf="@+id/tv_welcome" />
+
+    <LinearLayout
+        android:id="@+id/cb_container"
+        style="@style/PrincipalStyle"
+        android:layout_width="350dp"
+        android:layout_height="155dp"
+        android:layout_marginTop="80dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/et_name"
+        app:layout_constraintStart_toStartOf="@+id/et_name"
+        app:layout_constraintTop_toBottomOf="@+id/et_name">
+
+        <CheckBox
+            android:id="@+id/cb_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jetbrains_mono_medium"
+            android:text="@string/opt_1"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/cb_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jetbrains_mono_medium"
+            android:text="@string/opt_2"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/cb_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jetbrains_mono_medium"
+            android:text="@string/opt_3"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="229dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="52dp"
+        android:background="#1231DD"
+        android:fontFamily="@font/jetbrains_mono_medium"
+        android:text="@string/login_button"
+        android:textColorHighlight="#0B27C1"
+        android:textColorLink="#142AA6"
+        app:layout_constraintEnd_toEndOf="@+id/cb_container"
+        app:layout_constraintStart_toStartOf="@+id/cb_container"
+        app:layout_constraintTop_toBottomOf="@+id/cb_container" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
