@@ -1,10 +1,12 @@
 package com.example.act_uni2.fragment
 
+import android.app.Activity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import androidx.fragment.app.FragmentTransaction.TRANSIT_FRAGMENT_OPEN
 import com.example.act_uni2.R
 import com.example.act_uni2.databinding.FragmentWelcomeBinding
@@ -36,7 +38,7 @@ class WelcomeFragment : Fragment() {
                     binding.cb2.isChecked = false
                     binding.cb3.isChecked = false
                     value = true
-                    valorCb = binding.cb1.text.toString()
+                    valorCb = "1"
                 }
             }
             binding.cb2.setOnCheckedChangeListener { buttonView, isChecked ->
@@ -44,7 +46,7 @@ class WelcomeFragment : Fragment() {
                     binding.cb1.isChecked = false
                     binding.cb3.isChecked = false
                     value = true
-                    valorCb = binding.cb2.text.toString()
+                    valorCb = "2"
                 }
             }
             binding.cb3.setOnCheckedChangeListener { buttonView, isChecked ->
@@ -52,13 +54,14 @@ class WelcomeFragment : Fragment() {
                     binding.cb1.isChecked = false
                     binding.cb2.isChecked = false
                     value = true
-                    valorCb = binding.cb3.text.toString()
+                    valorCb = "3"
                 }
             }
 
             // Evento del boton para ir al siguiente fragmento
             binding.btnLogin.setOnClickListener {
                 val nameValue = binding.etName.text.toString().trim()
+                hideKeyBoard()
                 if (validator()) {
                     navigateTermFragment(nameValue, valorCb)
                 } else{
@@ -103,6 +106,18 @@ class WelcomeFragment : Fragment() {
             transaction.addToBackStack(null)                    // Para que al pulsar atras se pueda volver
             transaction.setTransition(TRANSIT_FRAGMENT_OPEN)
         transaction.commit()
+    }
+
+    // Para ocultar el teclado
+    private fun hideKeyBoard() {
+        val imm =
+            requireActivity().getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+        var view = requireActivity().currentFocus
+
+        if (view == null) {
+            view = View(activity)
+        }
+        imm.hideSoftInputFromWindow(view.windowToken, 0)
     }
 
 }
