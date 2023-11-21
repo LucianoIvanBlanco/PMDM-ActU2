@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login_user">Nombre de usuario</string>
+    <string name="opt_2">Noticias deportivas</string>
+    <string name="opt_3">Noticias tecnologicas</string>
+    <string name="login_empty_fields_error_message">Por favor rellena todos los campos</string>
+    <string name="terms_hello">Hola</string>
+    <string name="terms_message">Tenga en cuenta que puede haber material confidencial a continuación.</string>
+    <string name="terms_ask">Eres mayor de 18 años?</string>
+    <string name="terms_yes_or_no">Si / No</string>
+    <string name="next_button">Siguiente</string>
+    <string name="terms_no_or_yes">No / Si</string>
+    <string name="title_general_news">Noticias generales</string>
+    <string name="title_sports_news">Noticias deportivas</string>
+    <string name="title_tech_news">Noticias tecnologicas</string>
+    <string name="button_add_news">Agregar noticias</string>
+    <string name="title_general_news_fragment">Noticias generales</string>
+    <string name="title_sports_news_fragment">Noticias deportivas</string>
+    <string name="title_tech_news_fragment">Noticias tecnologicas</string>
+    <string name="text_author">Autor</string>
+    <string name="text_title">Titulo</string>
+    <string name="text_description">Descripcion</string>
+    <string name="welcome_title">Bienvenido</string>
+    <string name="login_button">Entrar</string>
+    <string name="opt_1">Noticias generales</string>
+    <string name="enter_button">Entrar</string>
+    <string name="title_item">Titulo</string>
+</resources>

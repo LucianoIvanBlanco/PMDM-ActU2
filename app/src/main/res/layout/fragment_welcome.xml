@@ -10,7 +10,7 @@
 
     <TextView
         android:id="@+id/tv_welcome"
-        style="@style/Widget.AppCompat.TextView"
+        style="@style/fragmentsText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -35,6 +35,8 @@
         android:fontFamily="@font/jetbrains_mono_medium"
         android:hint="@string/login_user"
         android:inputType="text"
+        android:textColor="#131313"
+        android:textColorHint="#131313"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/tv_welcome"
         app:layout_constraintHorizontal_bias="0.0"
@@ -58,6 +60,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/jetbrains_mono_medium"
             android:text="@string/opt_1"
+            android:textColor="#131313"
             android:textStyle="bold" />
 
         <CheckBox
@@ -66,6 +69,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/jetbrains_mono_medium"
             android:text="@string/opt_2"
+            android:textColor="#131313"
             android:textStyle="bold" />
 
         <CheckBox
@@ -74,6 +78,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/jetbrains_mono_medium"
             android:text="@string/opt_3"
+            android:textColor="#131313"
             android:textStyle="bold" />
 
 

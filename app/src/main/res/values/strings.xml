@@ -25,5 +25,6 @@
     <string name="login_button">Enter</string>
     <string name="opt_1">General news</string>
     <string name="enter_button">Enter</string>
+    <string name="title_item">Title</string>
 
 </resources>
