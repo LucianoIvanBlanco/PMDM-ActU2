@@ -17,5 +17,6 @@
     <string name="title_general_news">General news</string>
     <string name="title_sports_news">Sports news\n</string>
     <string name="title_tech_news">Tech news\n</string>
+    <string name="button_add_news">Add news</string>
 
 </resources>

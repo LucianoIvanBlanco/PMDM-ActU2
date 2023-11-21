@@ -52,7 +52,7 @@ class TermFragment : Fragment() {
         binding.btnNext.isEnabled = false
 
         // Aqui estamos imprimiendo los datos del fragment anterior
-        binding.tvResult.setText(name + valorCb)
+        binding.tvResult.setText(name)
 
         binding.switch1.setOnCheckedChangeListener { buttonView, isChecked ->
             binding.btnNext.isEnabled = isChecked
@@ -71,7 +71,6 @@ class TermFragment : Fragment() {
         val intent = Intent(requireContext(), HomeActivity::class.java)
         intent.putExtra("nameValue", nameValue)
         intent.putExtra("categoryValue", categoryValue)
-        Log.d("CategoryTag", "El valor es : $categoryValue")
         startActivity(intent)
     }
 

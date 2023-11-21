@@ -31,7 +31,7 @@ class HomeActivity : AppCompatActivity() {
             // Obtener los valores de los extras
             nameValue = intent.getStringExtra("nameValue")
             categoryValue = intent.getStringExtra("categoryValue")
-            Log.d("CategoryTag", "El valor es : $categoryValue")
+            Log.d("CategoryTag", "El valor es : $nameValue $categoryValue")
         }
         setBottomNavigation()
 
