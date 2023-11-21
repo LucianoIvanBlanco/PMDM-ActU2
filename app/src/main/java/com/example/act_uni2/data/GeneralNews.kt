@@ -1,5 +1,9 @@
 import com.utad.misnoticias.data.New
 
+public fun getAllNews(): List<New> {
+    return generalNews
+}
+
 val generalNews = listOf<New>(
     New(
         title = "Por qué aumenta el cáncer entre adultos jóvenes: los tumores en menores de 50 años crecen casi un 80% en tres décadas",

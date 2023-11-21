@@ -1,5 +1,11 @@
 package com.utad.misnoticias.data
 
+import com.example.act_uni2.data.sportNews
+
+public fun getTech(): List<New> {
+    return techNews
+}
+
 val techNews = listOf<New>(
     New(
         title = "Whatsapp Web, Facebook, Instagram y otros servicios de Meta sufren una caída en su entorno web",

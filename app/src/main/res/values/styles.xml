@@ -12,14 +12,32 @@
         <item name="android:padding">8dp</item>
     </style>
 
-    <style name="UserStyle" parent="PrincipalStyle">
-        <item name="android:padding">20dp</item>
-    </style>
-
-    <style name="StyleTitle" parent="@style/TextAppearance.AppCompat.Display1">
+    <style name="fragmentsText">
+        <item name="android:textSize">20dp</item>
+        <item name="android:textAlignment">center</item>
         <item name="android:textStyle">bold</item>
         <item name="android:fontFamily">@font/jetbrains_mono_medium</item>
     </style>
 
+
+    <style name="title">
+        <item name="android:textSize">35dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="secondaryTitle">
+        <item name="android:textSize">18dp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="btn_primary">
+        <item name="android:background">"#673AB7"</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:fontFamily">@font/jetbrains_mono_medium</item>
+
+    </style>
 
 </resources>

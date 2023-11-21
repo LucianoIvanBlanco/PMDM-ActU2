@@ -81,14 +81,12 @@
 
     <Button
         android:id="@+id/btn_login"
+        style="@style/btn_primary"
         android:layout_width="229dp"
         android:layout_height="41dp"
         android:layout_marginTop="40dp"
-        android:background="#1231DD"
         android:fontFamily="@font/jetbrains_mono_medium"
-        android:text="@string/login_button"
-        android:textColorHighlight="#0B27C1"
-        android:textColorLink="#142AA6"
+        android:text="@string/enter_button"
         app:layout_constraintEnd_toEndOf="@+id/cb_container"
         app:layout_constraintStart_toStartOf="@+id/cb_container"
         app:layout_constraintTop_toBottomOf="@+id/cb_container" />

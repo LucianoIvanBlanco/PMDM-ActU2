@@ -28,11 +28,9 @@ class WelcomeFragment : Fragment() {
         return binding.root
     }
 
-        // Metodo donde metemos la logica del fragmento
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-            // Control de seleccion de checkbox
             binding.cb1.setOnCheckedChangeListener { buttonView, isChecked ->
                 if (isChecked) {
                     binding.cb2.isChecked = false
@@ -58,7 +56,6 @@ class WelcomeFragment : Fragment() {
                 }
             }
 
-            // Evento del boton para ir al siguiente fragmento
             binding.btnLogin.setOnClickListener {
                 val nameValue = binding.etName.text.toString().trim()
                 hideKeyBoard()
@@ -71,7 +68,6 @@ class WelcomeFragment : Fragment() {
 
     }
 
-        // Validamos que esten rellenos los campos y el check
     private fun validator(): Boolean {
         val userName = binding.etName.text.toString().trim()
 
@@ -84,14 +80,11 @@ class WelcomeFragment : Fragment() {
         return true
     }
 
-        // Muestra mensaje de error
     private fun showEmptyFieldsMessage() {
         val message = getString(R.string.login_empty_fields_error_message)
         Snackbar.make(binding.root, message, Snackbar.LENGTH_SHORT).show()
     }
 
-
-        // Navegamos al siguiente fragmento
         private fun navigateTermFragment(nameValue: String, valorCb: String) {
             val bundle = Bundle()
             bundle.putString("name", nameValue)
@@ -103,7 +96,7 @@ class WelcomeFragment : Fragment() {
         val transaction = parentFragmentManager.beginTransaction()
             transaction.setReorderingAllowed(true)
             transaction.replace(R.id.fcv_nav_graph, termFragment)
-            transaction.addToBackStack(null)                    // Para que al pulsar atras se pueda volver
+            transaction.addToBackStack(null)
             transaction.setTransition(TRANSIT_FRAGMENT_OPEN)
         transaction.commit()
     }

@@ -17,11 +17,9 @@ class TermFragment : Fragment() {
     private lateinit var _binding: FragmentTermBinding
     private val binding: FragmentTermBinding get() = _binding
 
-    // Guardaremos los datos recibidos del fragmento
+
     private var name: String? = null
     private var valorCb: String? = null
-
-
 
 
     override fun onCreateView(
@@ -30,12 +28,11 @@ class TermFragment : Fragment() {
     ): View? {
         _binding = FragmentTermBinding.inflate(inflater, container, false)
         return binding.root
-
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //Extrer argumentos del bundle
+
         if (requireArguments().containsKey("name")) {
             name = requireArguments().getString("name")
         }
@@ -51,17 +48,14 @@ class TermFragment : Fragment() {
         binding.switch1.isChecked = false
         binding.btnNext.isEnabled = false
 
-        // Aqui estamos imprimiendo los datos del fragment anterior
         binding.tvResult.setText(name)
 
         binding.switch1.setOnCheckedChangeListener { buttonView, isChecked ->
             binding.btnNext.isEnabled = isChecked
         }
 
-        // Evento del boton para ir al siguiente fragmento
         binding.btnNext.setOnClickListener {
             navigateToNextActivity(name, valorCb)
-
 
         }
 
