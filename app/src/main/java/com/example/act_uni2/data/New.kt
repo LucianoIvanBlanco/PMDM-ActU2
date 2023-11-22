@@ -1,4 +1,4 @@
-package com.utad.misnoticias.data
+package com.example.misnoticias.data
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

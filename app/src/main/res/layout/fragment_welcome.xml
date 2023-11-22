@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ADD6F6"
-    tools:context=".fragment.WelcomeFragment">
+    tools:context="com.example.act_uni2.fragment.WelcomeFragment">
 
     <TextView
         android:id="@+id/tv_welcome"

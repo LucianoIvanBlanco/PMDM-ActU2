@@ -1,6 +1,6 @@
 package com.example.act_uni2.data
 
-import com.utad.misnoticias.data.New
+import com.example.misnoticias.data.New
 
 public fun getSport(): List<New> {
     return sportNews

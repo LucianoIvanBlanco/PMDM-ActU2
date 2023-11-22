@@ -1,6 +1,4 @@
-package com.utad.misnoticias.data
-
-import com.example.act_uni2.data.sportNews
+package com.example.misnoticias.data
 
 public fun getTech(): List<New> {
     return techNews

@@ -26,9 +26,8 @@ class HomeActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val intent = intent
-        // Verificar si el Intent tiene extras (datos enviados desde el fragmento)
+
         if (intent != null && intent.hasExtra("nameValue") && intent.hasExtra("categoryValue")) {
-            // Obtener los valores de los extras
             nameValue = intent.getStringExtra("nameValue")
             categoryValue = intent.getStringExtra("categoryValue")
             Log.d("CategoryTag", "El valor es : $nameValue $categoryValue")

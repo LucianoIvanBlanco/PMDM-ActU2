@@ -1,4 +1,4 @@
-import com.utad.misnoticias.data.New
+import com.example.misnoticias.data.New
 
 public fun getAllNews(): List<New> {
     return generalNews

@@ -31,40 +31,40 @@ class WelcomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-            binding.cb1.setOnCheckedChangeListener { buttonView, isChecked ->
-                if (isChecked) {
-                    binding.cb2.isChecked = false
-                    binding.cb3.isChecked = false
-                    value = true
-                    valorCb = "1"
-                }
+        binding.cb1.setOnCheckedChangeListener { buttonView, isChecked ->
+            if (isChecked) {
+                binding.cb2.isChecked = false
+                binding.cb3.isChecked = false
+                value = true
+                valorCb = "1"
             }
-            binding.cb2.setOnCheckedChangeListener { buttonView, isChecked ->
-                if (isChecked) {
-                    binding.cb1.isChecked = false
-                    binding.cb3.isChecked = false
-                    value = true
-                    valorCb = "2"
-                }
+        }
+        binding.cb2.setOnCheckedChangeListener { buttonView, isChecked ->
+            if (isChecked) {
+                binding.cb1.isChecked = false
+                binding.cb3.isChecked = false
+                value = true
+                valorCb = "2"
             }
-            binding.cb3.setOnCheckedChangeListener { buttonView, isChecked ->
-                if (isChecked) {
-                    binding.cb1.isChecked = false
-                    binding.cb2.isChecked = false
-                    value = true
-                    valorCb = "3"
-                }
+        }
+        binding.cb3.setOnCheckedChangeListener { buttonView, isChecked ->
+            if (isChecked) {
+                binding.cb1.isChecked = false
+                binding.cb2.isChecked = false
+                value = true
+                valorCb = "3"
             }
+        }
 
-            binding.btnLogin.setOnClickListener {
-                val nameValue = binding.etName.text.toString().trim()
-                hideKeyBoard()
-                if (validator()) {
-                    navigateTermFragment(nameValue, valorCb)
-                } else{
-                    showEmptyFieldsMessage()
-                }
+        binding.btnLogin.setOnClickListener {
+            val nameValue = binding.etName.text.toString().trim()
+            hideKeyBoard()
+            if (validator()) {
+                navigateTermFragment(nameValue, valorCb)
+            } else {
+                showEmptyFieldsMessage()
             }
+        }
 
     }
 
@@ -85,19 +85,19 @@ class WelcomeFragment : Fragment() {
         Snackbar.make(binding.root, message, Snackbar.LENGTH_SHORT).show()
     }
 
-        private fun navigateTermFragment(nameValue: String, valorCb: String) {
-            val bundle = Bundle()
-            bundle.putString("name", nameValue)
-            bundle.putString("valorCb", valorCb)
+    private fun navigateTermFragment(nameValue: String, valorCb: String) {
+        val bundle = Bundle()
+        bundle.putString("name", nameValue)
+        bundle.putString("valorCb", valorCb)
 
         val termFragment = TermFragment()
-            termFragment.arguments = bundle
+        termFragment.arguments = bundle
 
         val transaction = parentFragmentManager.beginTransaction()
-            transaction.setReorderingAllowed(true)
-            transaction.replace(R.id.fcv_nav_graph, termFragment)
-            transaction.addToBackStack(null)
-            transaction.setTransition(TRANSIT_FRAGMENT_OPEN)
+        transaction.setReorderingAllowed(true)
+        transaction.replace(R.id.fcv_nav_graph, termFragment)
+        transaction.addToBackStack(null)
+        transaction.setTransition(TRANSIT_FRAGMENT_OPEN)
         transaction.commit()
     }
 

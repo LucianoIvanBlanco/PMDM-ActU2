@@ -7,8 +7,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.example.act_uni2.databinding.ActivityDetaillNewsBinding
-import com.example.act_uni2.data.*
-import com.utad.misnoticias.data.getTech
+import com.example.act_uni2.data.getSport
+import com.example.misnoticias.data.getTech
 import getAllNews
 
 

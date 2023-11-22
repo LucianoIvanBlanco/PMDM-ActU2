@@ -18,7 +18,7 @@ class SportsNewsFragment : Fragment() {
     private lateinit var _binding: FragmentSportsNewsBinding
     private val binding: FragmentSportsNewsBinding get() = _binding
 
-    private lateinit var adapter : NewRecyclerViewAdapter
+    private lateinit var adapter: NewRecyclerViewAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,9 +31,10 @@ class SportsNewsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.rvSportsNews.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL,false)
+        binding.rvSportsNews.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         val list = getSport()
-        adapter = NewRecyclerViewAdapter(list){id -> navigateToDetail(id)}
+        adapter = NewRecyclerViewAdapter(list) { id -> navigateToDetail(id) }
         binding.rvSportsNews.adapter = adapter
     }
 

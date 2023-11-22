@@ -5,7 +5,7 @@
     style="@style/title"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragmentsForNavMenu.TechNewsFragment">
+    tools:context="com.example.act_uni2.fragmentsForNavMenu.TechNewsFragment">
 
     <TextView
         android:id="@+id/tv_title_tech"

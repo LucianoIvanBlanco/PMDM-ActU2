@@ -2,14 +2,12 @@ package com.example.act_uni2.fragment
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import com.example.act_uni2.HomeActivity
 import com.example.act_uni2.databinding.FragmentTermBinding
+import com.example.act_uni2.HomeActivity
 
 
 class TermFragment : Fragment() {
@@ -61,7 +59,7 @@ class TermFragment : Fragment() {
 
     }
 
-    private fun navigateToNextActivity(nameValue: String?, categoryValue: String?){
+    private fun navigateToNextActivity(nameValue: String?, categoryValue: String?) {
         val intent = Intent(requireContext(), HomeActivity::class.java)
         intent.putExtra("nameValue", nameValue)
         intent.putExtra("categoryValue", categoryValue)
