@@ -6,6 +6,31 @@
     android:layout_height="match_parent"
     tools:context="com.example.act_uni2.fragmentsForNavMenu.GeneralNewsFragment">
 
+<!--    <TextView-->
+<!--        android:id="@+id/tv_title_general"-->
+<!--        style="@style/title"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/title_general_news_fragment"-->
+<!--        android:textAlignment="center"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.098"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.04" />-->
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/rv_general_news"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tv_title_general"-->
+<!--        tools:listitem="@layout/item_news" />-->
+
     <TextView
         android:id="@+id/tv_title_general"
         style="@style/title"
@@ -14,6 +39,7 @@
         android:text="@string/title_general_news_fragment"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.098"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -21,8 +47,6 @@
         android:id="@+id/rv_general_news"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:padding="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/tv_title_general"
         app:layout_constraintTop_toBottomOf="@+id/tv_title_general"
